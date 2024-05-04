@@ -1,10 +1,6 @@
-package com.company;
-
-
 import java.util.Scanner;
 
-public class Main {
-
+public class Calc {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите два числа (арабских или римских): ");
@@ -111,3 +107,5 @@ class Roman {
     }
 
 }
+
+
