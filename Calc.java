@@ -4,19 +4,19 @@ public class Calc {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите два числа (арабских или римских): ");
-        String expression = scanner.nextLine();
-        System.out.println(parse(expression));
+        String input = scanner.nextLine();
+        System.out.println(calc(input));
     }
 
-    public static String parse(String expression) throws Exception {
+    public static String calc(String input) throws Exception {
         int num1;
         int num2;
         String oper;
         String result;
         boolean isRoman;
-        String[] operands = expression.split("[+\\-*/]");
+        String[] operands = input.split("[+\\-*/]");
         if (operands.length != 2) throw new Exception("Должно быть два числа");
-        oper = detectOperation(expression);
+        oper = detectOperation(input);
         if (oper == null) throw new Exception("Неподдерживаемая математическая операция");
         //если оба числа римские
         if (Roman.isRoman(operands[0]) && Roman.isRoman(operands[1])) {
